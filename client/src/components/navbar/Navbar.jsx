@@ -22,8 +22,11 @@ const Navbar = () => {
           <a href="">
             <img src="/instagram.png" alt="" />
           </a>
-          <a href="">
+          <a href="https://rameesmsiyad/github.com">
             <img src="/github.png" alt="" />
+          </a>
+          <a href="">
+            <img src="/linkedin.png" alt="" />
           </a>
         </div>
       </div>
