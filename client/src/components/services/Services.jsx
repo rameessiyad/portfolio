@@ -1,17 +1,43 @@
+import { useRef } from "react";
 import "./services.scss";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 const Services = () => {
+  const ref = useRef();
+  const isInView = useInView(ref, { margin: "-100px" });
+
+  const variants = {
+    initial: {
+      x: -500,
+      y: 10,
+      opacity: 0,
+    },
+    animate: {
+      x: 0,
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1.3,
+        staggerChildren: 0.1,
+      },
+    },
+  };
   return (
-    <motion.div className="services">
-      <motion.div className="text-container">
+    <motion.div
+      className="services"
+      variants={variants}
+      initial="initial"
+      ref={ref}
+      animate={isInView ? "animate" : "initial"}
+    >
+      <motion.div className="text-container" variants={variants}>
         <p>
           I build scalable, full stack solutions that bring <br />
           your digital vision to life.
         </p>
         <hr />
       </motion.div>
-      <motion.div className="title-container">
+      <motion.div className="title-container" variants={variants}>
         <div className="title">
           <img src="/services.jpg" alt="img" />
           <h1>
@@ -24,7 +50,7 @@ const Services = () => {
           </h1>
         </div>
       </motion.div>
-      <motion.div className="list-container">
+      <motion.div className="list-container" variants={variants}>
         <motion.div
           className="box"
           whileHover={{ background: "lightGray", color: "black" }}
@@ -71,9 +97,8 @@ const Services = () => {
           <h2>Performance Optimization</h2>
           <p>
             Enhancing application performance through code optimization, load
-            testing, and debugging. I focus on delivering a fast, smooth, and
-            reliable user experience while ensuring that the application runs
-            securely and efficiently.
+            testing, and debugging to deliver a fast, smooth, and secure user
+            experience
           </p>
           <button>Go</button>
         </motion.div>
