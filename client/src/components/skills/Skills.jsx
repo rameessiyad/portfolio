@@ -4,20 +4,25 @@ import { motion, useInView } from "framer-motion";
 
 const skillsData = [
   { name: "JavaScript", icon: "/javascript.png" },
+  { name: "TypeScript", icon: "/typescript.png" },
   { name: "Python", icon: "/python.png" },
   { name: "PHP", icon: "/php.png" },
   { name: "React.js", icon: "/reactjs.png" },
-  { name: "Next.js", icon: "/nextjs.png" },
+  { name: "Next.js", icon: "/nextjs.svg" },
   { name: "Tailwind CSS", icon: "/tailwind-css.png" },
   { name: "Bootstrap", icon: "/bootstrap.png" },
+  { name: "Redux", icon: "/redux.png" },
   { name: "Node.js", icon: "/nodejs.png" },
+  { name: "Express.js", icon: "/expressjs.png" },
   { name: "Nest.js", icon: "/nestjs.png" },
   { name: "MongoDB", icon: "/mongodb.png" },
   { name: "MySQL", icon: "/mysql.png" },
   { name: "Prisma ORM", icon: "/prisma.png" },
   { name: "Docker", icon: "/docker.png" },
+  { name: "Postman", icon: "/postman.png" },
   { name: "Git", icon: "/git.png" },
   { name: "Github", icon: "/github.png" },
+  { name: "AWS", icon: "/aws.png" },
   { name: "Chatgpt", icon: "/chatgpt.png" },
 ];
 
@@ -49,7 +54,9 @@ const Skills = () => {
       animate={isInView ? "animate" : "initial"}
     >
       <motion.div className="skills-header" variants={variants}>
-        <h1>My Skills</h1>
+        <h1>
+          My <span> Skills</span>
+        </h1>
         <p>
           Technologies and tools I work with to build full-stack applications.
         </p>
