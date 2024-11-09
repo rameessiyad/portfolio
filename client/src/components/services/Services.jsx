@@ -2,6 +2,7 @@ import { useRef } from "react";
 import "./services.scss";
 import { motion, useInView } from "framer-motion";
 
+
 const Services = () => {
   const ref = useRef();
   const isInView = useInView(ref, { margin: "-100px" });
