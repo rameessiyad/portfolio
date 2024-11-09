@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 // eslint-disable-next-line react/prop-types
 const ToggleButton = ({ setOpen }) => {
   return (
-    <button onClick={() => setOpen((prev) => !prev)}>
+    <button onClick={() => setOpen((prev) => !prev)} style={{ zIndex: 2000 }} >
       <svg width="23" height="23" viewBox="0 0 23 23">
         <motion.path
           d="M 2 2.5 H 24.5"
