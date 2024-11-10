@@ -8,20 +8,20 @@ const Services = () => {
   const isInView = useInView(ref, { margin: "-100px" });
 
   const variants = {
-    initial: {
-      x: -500,
-      y: 10,
-      opacity: 0,
-    },
-    animate: {
-      x: 0,
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 1.3,
-        staggerChildren: 0.1,
-      },
-    },
+    // initial: {
+    //   x: -500,
+    //   y: 10,
+    //   opacity: 0,
+    // },
+    // animate: {
+    //   x: 0,
+    //   y: 0,
+    //   opacity: 1,
+    //   transition: {
+    //     duration: 1.3,
+    //     staggerChildren: 0.1,
+    //   },
+    // },
   };
   return (
     <motion.div

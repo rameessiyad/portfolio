@@ -1,3 +1,5 @@
+@import "../../app.scss";
+
 .services {
   background: linear-gradient(180deg, #0c0c1d, #111132);
   height: 100%;
@@ -12,17 +14,31 @@
     align-items: center;
     gap: 20px;
 
+    @include mobile {
+      flex-direction: column;
+      align-self: center;
+      text-align: center;
+    }
+
     p {
       font-weight: 200;
       font-size: 20px;
       color: gray;
       text-align: right;
+
+      @include mobile {
+        font-size: 18px;
+      }
     }
 
     hr {
       width: 500px;
       border: none;
       border-top: 0.5px solid gray;
+
+      @include mobile {
+        width: 300px;
+      }
     }
   }
   .title-container {
@@ -31,10 +47,20 @@
     flex-direction: column;
     align-items: center;
 
+    @include mobile {
+      width: 100%;
+    }
+
     .title {
       display: flex;
       gap: 50px;
       align-items: center;
+
+      @include mobile {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+      }
     }
 
     img {
@@ -42,11 +68,20 @@
       height: 100px;
       border-radius: 50px;
       object-fit: cover;
+
+      @include mobile {
+        width: 200px;
+        height: 50px;
+      }
     }
 
     h1 {
       font-size: 66px;
       font-weight: 200;
+
+      @include mobile {
+        font-size: 32px;
+      }
     }
 
     h1 > b:hover {
@@ -59,6 +94,13 @@
     max-width: 1266px;
     margin: auto;
 
+    @include mobile {
+      margin-bottom: 22px;
+      flex-direction: column;
+      width: 100%;
+      gap: 8px;
+    }
+
     .box {
       width: 500px;
       padding: 24px;
@@ -67,8 +109,27 @@
       flex-direction: column;
       justify-content: space-between;
 
+      @include mobile {
+        width: 100%;
+        border: none;
+        align-items: center;
+        // gap: 10px;
+        padding: 10px;
+      }
+
+      p {
+        @include mobile {
+          display: none;
+        }
+      }
+
       h2 {
         font-size: 22px;
+
+        @include mobile {
+          font-size: 16px;
+          margin: 10px 0;
+        }
       }
 
       button {
@@ -76,6 +137,15 @@
         background-color: orange;
         border: none;
         cursor: pointer;
+
+        @include mobile {
+          background-color: transparent;
+          border: 1px solid orange;
+          border-radius: 5px;
+          color: orange;
+          width: 50%;
+          padding: 5px;
+        }
       }
     }
   }
