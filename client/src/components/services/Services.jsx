@@ -2,26 +2,25 @@ import { useRef } from "react";
 import "./services.scss";
 import { motion, useInView } from "framer-motion";
 
-
 const Services = () => {
   const ref = useRef();
   const isInView = useInView(ref, { margin: "-100px" });
 
   const variants = {
-    // initial: {
-    //   x: -500,
-    //   y: 10,
-    //   opacity: 0,
-    // },
-    // animate: {
-    //   x: 0,
-    //   y: 0,
-    //   opacity: 1,
-    //   transition: {
-    //     duration: 1.3,
-    //     staggerChildren: 0.1,
-    //   },
-    // },
+    initial: {
+      x: -500,
+      y: 10,
+      opacity: 0,
+    },
+    animate: {
+      x: 0,
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1.3,
+        staggerChildren: 0.1,
+      },
+    },
   };
   return (
     <motion.div
@@ -29,7 +28,7 @@ const Services = () => {
       variants={variants}
       initial="initial"
       ref={ref}
-      animate={isInView ? "animate" : "initial"}
+      animate={window.innerWidth <= 738 ? "aniimate" : isInView && "animate"}
     >
       <motion.div className="text-container" variants={variants}>
         <p>
