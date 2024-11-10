@@ -93,6 +93,7 @@
     display: flex;
     max-width: 1266px;
     margin: auto;
+    margin-bottom: 50px;
 
     @include mobile {
       margin-bottom: 22px;
