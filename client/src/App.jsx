@@ -31,25 +31,12 @@ const App = () => {
       <section id="Portfolio">
         <Parallax type="portfolio" />
       </section>
-      <section>
+      {/* <section> */}
         <Portfolio />
-      </section>
-      {/* <section>
-        <Services />
-      </section> */}
-      {/* <section id="Skills">
-        <Parallax type="skills" />
-      </section>
-      <section>
-        <Skills />
-      </section> */}
-      {/* <section id="Portfolio">
-        <Parallax type="portfolio" />
-      </section>
-      <Portfolio />
+      {/* </section> */}
       <section id="Contact">
         <Contact />
-      </section> */}
+      </section>
     </div>
   );
 };
